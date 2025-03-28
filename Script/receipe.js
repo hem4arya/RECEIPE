@@ -1039,8 +1039,3 @@ export const recipes = [
   },
 ];
 
-// export const recipes = [
-//   { name: "Pasta", ingredients: ["pasta", "tomato", "cheese"], image: "https://foodish-api.com/images/biryani/biryani32.jpg" },
-//   { name: "Salad", ingredients: ["lettuce", "tomato", "cucumber"], image: "https://foodish-api.com/images/burger/burger101.jpg" },
-//   { name: "Pizza", ingredients: ["dough", "cheese", "pepperoni"], image: "https://foodish-api.com/images/burger/burger101.jpg" }
-// ];
