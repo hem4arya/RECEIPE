@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 /* General Reset */
 body {
     font-family: 'Poppins', sans-serif;
@@ -16,7 +20,7 @@ header {
 h1 {
     font-size: 2.5rem;
     color: #2c5f2d;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 /* Search Bar */
@@ -27,21 +31,20 @@ h1 {
     border: 2px solid #2c5f2d;
     border-radius: 25px;
     outline: none;
-    transition: all 0.3s ease-in-out;
     background: #fff;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: width 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 #searchBar:focus {
     width: 55%;
-    background: #f1ffe7;
+    box-shadow: 0px 0px 8px rgba(44, 95, 45, 0.4);
 }
 
 /* Recipe Container */
 #recipesContainer {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 15px;
     justify-content: center;
     padding: 20px;
 }
@@ -50,41 +53,59 @@ h1 {
 .recipe-tile {
     width: 220px;
     background: white;
-    border-radius: 15px;
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
     cursor: pointer;
     position: relative;
 }
 
 .recipe-tile:hover {
-    transform: scale(1.07);
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+    box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.15);
 }
 
+/* Recipe Image */
 .recipe-tile img {
     width: 100%;
     height: 150px;
     object-fit: cover;
-    border-bottom: 3px solid #2c5f2d;
+    border-bottom: 2px solid #2c5f2d;
 }
 
 /* Recipe Title */
 .recipe-tile h3 {
-    padding: 12px;
+    padding: 10px;
     font-size: 18px;
     color: #2c5f2d;
 }
 
-/* Leaf Decoration */
+/* Leaf Icon */
 .recipe-tile::after {
     content: "🌿";
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     position: absolute;
-    top: -10px;
-    right: -10px;
-    transform: rotate(15deg);
+    top: -8px;
+    right: -8px;
     color: #4caf50;
+}
+
+/* Back Button */
+#backButton {
+    background: #2c5f2d;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    transition: background 0.25s ease-in-out;
+}
+
+#backButton:hover {
+    background: #3a773a;
 }

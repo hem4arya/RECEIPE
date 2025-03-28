@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const params = new URLSearchParams(window.location.search);
     const recipeId = parseInt(params.get("id"));
 
-    const recipe = recipes.flat().find(r => r.id === recipeId);
+    const recipe = recipes.find(r => r.id === recipeId);
 
     if (recipe) {
         document.getElementById("recipeImage").src = recipe.image;
