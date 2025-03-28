@@ -1,14 +1,12 @@
 import { recipes } from "./receipe.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Improve scrolling experience with a smooth effect
 
   const searchBar = document.getElementById("searchBar");
   const recipesContainer = document.getElementById("recipesContainer");
 
   function renderRecipes(filteredRecipes) {
-    recipesContainer.innerHTML = ""; // Clear previous results
-
+    recipesContainer.innerHTML = "";
     filteredRecipes.forEach((recipe) => {
       const recipeTile = document.createElement("div");
       recipeTile.classList.add("recipe-tile");
@@ -17,7 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 <h3>${recipe.name}</h3>
             `;
 
-      // Redirect to recipe.html when clicked
       recipeTile.addEventListener("click", () => {
         window.location.href = `recipe.html?id=${recipe.id}`;
       });
@@ -26,7 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Search functionality
   searchBar.addEventListener("input", () => {
     const query = searchBar.value.toLowerCase();
     const filteredRecipes = recipes
@@ -41,5 +37,5 @@ document.addEventListener("DOMContentLoaded", () => {
     renderRecipes(filteredRecipes);
   });
 
-  renderRecipes(recipes); // Initial render
+  renderRecipes(recipes);
 });
